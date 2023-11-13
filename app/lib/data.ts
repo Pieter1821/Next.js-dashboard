@@ -23,7 +23,11 @@ export async function fetchRevenue() {
 
     const data = await sql<Revenue>`SELECT * FROM revenue`;
 
+<<<<<<< HEAD
      console.log('Data fetch complete after 3 seconds.');
+=======
+    console.log('Data fetch complete after 3 seconds.');
+>>>>>>> 45b8e53cef5484b3c231bbd9146c5413657f2a7e
 
     return data.rows;
   } catch (error) {
@@ -39,7 +43,23 @@ export async function fetchLatestInvoices() {
   await new Promise((resolve) => setTimeout(resolve, 3000));
   console.log('Data fetch complete after 3 seconds.');
 
+<<<<<<< HEAD
 
+=======
+  // NOTE: comment in this code when you get to this point in the course.
+  // const data = await sql<LatestInvoiceRaw>`SELECT * FROM invoices`;
+  // return data.rows;
+
+  // NOTE: comment in this code when you get to this point in the course.
+  // const data = await sql<LatestInvoiceRaw>`SELECT * FROM invoices`;
+  // return data.rows.map((invoice) => ({
+  //   ...invoice,
+  //   amount: formatCurrency(invoice.amount),
+  // }));
+
+  // NOTE: comment in this code when you get to this point in the course.
+  // const data = await sql<LatestInvoiceRaw>`SELECT * FROM invoices`;
+>>>>>>> 45b8e53cef5484b3c231bbd9146c5413657f2a7e
   try {
     const data = await sql<LatestInvoiceRaw>`
       SELECT invoices.amount, customers.name, customers.image_url, customers.email, invoices.id
@@ -61,6 +81,28 @@ export async function fetchLatestInvoices() {
 
 export async function fetchCardData() {
   noStore();
+<<<<<<< HEAD
+=======
+
+  console.log('Fetching card data...');
+  await new Promise((resolve) => setTimeout(resolve, 3000));
+  console.log('Data fetch complete after 3 seconds.');
+
+  // NOTE: comment in this code when you get to this point in the course.
+  // const data = await sql<LatestInvoiceRaw>`SELECT * FROM invoices`;
+  // return data.rows;
+
+  // NOTE: comment in this code when you get to this point in the course.
+  // const data = await sql<LatestInvoiceRaw>`SELECT * FROM invoices`;
+  // return data.rows.map((invoice) => ({
+  //   ...invoice,
+  //   amount: formatCurrency(invoice.amount),
+  // }));
+
+  // NOTE: comment in this code when you get to this point in the course.
+  // const data = await sql<LatestInvoiceRaw>`SELECT * FROM invoices`;
+
+>>>>>>> 45b8e53cef5484b3c231bbd9146c5413657f2a7e
   try {
     // You can probably combine these into a single SQL query
     // However, we are intentionally splitting them to demonstrate
