@@ -144,10 +144,10 @@ export default function Form({ customers }: { customers: CustomerField[] }) {
                   </p>
                 )
               )}
-
-              {state.message && (
-                <p className="mt-4 text-sm text-red-500">{state.message}</p>
-              )}
+              
+      {state.message && (
+        <p className="mt-4 text-sm text-red-500">{state.message}</p>
+      )}
             </div>
           ) : null}
         </fieldset>
